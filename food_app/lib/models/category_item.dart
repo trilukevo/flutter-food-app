@@ -18,6 +18,7 @@ class CategoryItem extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.bold,
               fontSize: 18,
+              fontFamily: 'Itim',
             ),
           ),
         ),
