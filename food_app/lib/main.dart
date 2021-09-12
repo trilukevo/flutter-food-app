@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:food_app/category_page.dart';
+// ignore: unused_import
+import 'package:food_app/models/foods_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/FoodsPage': (context) => FoodsPage(),
+        '/CategoriesPage': (context) => CategoryPage(),
+      },
       title: 'Food App',
       theme: ThemeData(
           primarySwatch: Colors.green,

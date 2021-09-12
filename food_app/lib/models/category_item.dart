@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/models/category.dart';
+// ignore: unused_import
 import 'package:food_app/models/foods_page.dart';
 
 // ignore: must_be_immutable
@@ -13,10 +14,8 @@ class CategoryItem extends StatelessWidget {
     return InkWell(
       onTap: () {
         print('tapped: ${this.category.content}');
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => FoodsPage(
-                  category: this.category,
-                )));
+        Navigator.pushNamed(context, FoodsPage.routeName,
+            arguments: {'category': category});
       },
       splashColor: Colors.deepPurple,
       child: Container(
