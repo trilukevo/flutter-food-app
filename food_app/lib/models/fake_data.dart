@@ -31,13 +31,13 @@ var FAKE_FOOD = [
     duration: Duration(minutes: 14),
     complexity: Complexity.Medium,
     ingredients: ['Sushi', 'Nori', 'Common'],
-    categoryId: 2,
+    categoryId: 1,
   ),
   Food(
     name: 'Mi xao Gion',
     duration: Duration(minutes: 13),
     complexity: Complexity.Simple,
     ingredients: ['Sushi', 'Nori', 'Common'],
-    categoryId: 3,
+    categoryId: 1,
   )
 ];

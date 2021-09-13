@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/models/category.dart';
+import 'package:food_app/models/detail_food_page.dart';
 import 'package:food_app/models/fake_data.dart';
 import 'package:food_app/models/food.dart';
 
@@ -21,14 +22,23 @@ class FoodsPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text('Foods from ${this.category!.content}')),
         body: Center(
-          child: ListView.builder(
-            itemCount: foods.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text('${foods[index].name}'),
-              );
-            },
-          ),
+          child: foods.length > 0
+              ? ListView.builder(
+                  itemCount: foods.length,
+                  itemBuilder: (context, index) {
+                    Food food = foods[index];
+                    return ListTile(
+                      title: Text('${foods[index].name}'),
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DetailFoodPage(
+                                  food: food,
+                                )));
+                      },
+                    );
+                  },
+                )
+              : Text('Nothing to show!'),
         ));
   }
 }

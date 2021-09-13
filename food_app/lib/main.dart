@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:food_app/category_page.dart';
+import 'package:food_app/models/detail_food_page.dart';
 // ignore: unused_import
 import 'package:food_app/models/foods_page.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/FoodsPage': (context) => FoodsPage(),
         '/CategoriesPage': (context) => CategoryPage(),
+        '/DetailFoodPage': (context) => DetailFoodPage(),
       },
       title: 'Food App',
       theme: ThemeData(
