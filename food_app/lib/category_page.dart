@@ -4,6 +4,7 @@ import 'package:food_app/models/category_item.dart';
 import 'package:food_app/models/fake_data.dart';
 
 class CategoryPage extends StatelessWidget {
+  static const String routeName = '/CategoryPage';
   const CategoryPage({Key? key}) : super(key: key);
 
   @override
