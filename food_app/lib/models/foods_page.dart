@@ -19,10 +19,16 @@ class FoodsPage extends StatelessWidget {
         .where((food) => this.category!.id == food.categoryId)
         .toList();
     return Scaffold(
-      appBar: AppBar(title: Text('Foods from ${this.category!.content}')),
-      body: Container(
-        child: Text('${this.category!.content}'),
-      ),
-    );
+        appBar: AppBar(title: Text('Foods from ${this.category!.content}')),
+        body: Center(
+          child: ListView.builder(
+            itemCount: foods.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text('${foods[index].name}'),
+              );
+            },
+          ),
+        ));
   }
 }
